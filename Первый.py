@@ -14,21 +14,21 @@ from bs4 import BeautifulSoup
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Токен вашего Telegram-бота
+# Токен Telegram-бота
 bot = telebot.TeleBot("7766574233:AAGmft91MSwXpubvTfAFhaVZFWGRPbYRMdU")
 
 # API ключ для OpenAI через openrouter.ai
 openai.api_base = "https://openrouter.ai/api/v1"
-openai.api_key = "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"
+openai.api_key = ""
 
 # API ключ для Google Search
-google_api_key = "AIzaSyBvu6k1CZu69v1FAVFxHzp3FQkDGSOUsug"
+google_api_key = ""
 
 # Идентификатор Custom Search Engine
-cse_id = "b5fd6ddc07c2743f3"
+cse_id = ""
 
 # API ключ для Prodia
-prodia_api_key = "97df967b-62e0-42ed-a232-72bd5ae7e3c9"
+prodia_api_key = ""
 
 # Список моделей и стилей
 models = [
@@ -162,8 +162,8 @@ def search_and_summarize(message):
                 {"role": "user", "content": prompt}
             ],
             headers={
-                "HTTP-Referer": "https://your-site-url.com",  # Замените на ваш сайт
-                "X-Title": "Your App Name"  # Замените на название вашего приложения
+                "HTTP-Referer": "https://your-site-url.com",  
+                "X-Title": "Your App Name"  
             },
         )
         
@@ -179,8 +179,8 @@ def search_and_summarize(message):
                 {"role": "user", "content": blog_prompt}
             ],
             headers={
-                "HTTP-Referer": "https://your-site-url.com",  # Замените на ваш сайт
-                "X-Title": "Your App Name"  # Замените на название вашего приложения
+                "HTTP-Referer": "https://your-site-url.com",  
+                "X-Title": "Your App Name" 
             },
         )
         
@@ -195,8 +195,8 @@ def search_and_summarize(message):
                 {"role": "user", "content": image_prompt}
             ],
             headers={
-                "HTTP-Referer": "https://your-site-url.com",  # Замените на ваш сайт
-                "X-Title": "Your App Name"  # Замените на название вашего приложения
+                "HTTP-Referer": "https://your-site-url.com",  
+                "X-Title": "Your App Name"  
             },
         )
         
