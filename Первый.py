@@ -15,7 +15,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Токен Telegram-бота
-bot = telebot.TeleBot("7766574233:AAGmft91MSwXpubvTfAFhaVZFWGRPbYRMdU")
+bot = telebot.TeleBot("")
 
 # API ключ для OpenAI через openrouter.ai
 openai.api_base = "https://openrouter.ai/api/v1"
